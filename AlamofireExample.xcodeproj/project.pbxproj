@@ -15,9 +15,10 @@
 		AC35F90B27C8CFB8007D0A84 /* BasicUIScrollViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC35F90A27C8CFB8007D0A84 /* BasicUIScrollViewController.swift */; };
 		AC35F90F27CF4E9B007D0A84 /* APIRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC35F90E27CF4E9B007D0A84 /* APIRouter.swift */; };
 		AC35F91127CF4EAA007D0A84 /* APIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC35F91027CF4EAA007D0A84 /* APIClient.swift */; };
-		AC35F91327CF4EC2007D0A84 /* DBTime.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC35F91227CF4EC2007D0A84 /* DBTime.swift */; };
 		AC35F91527CF50E3007D0A84 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC35F91427CF50E3007D0A84 /* Constants.swift */; };
 		AC35F91827CF59D6007D0A84 /* JSONConverter.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC35F91727CF59D6007D0A84 /* JSONConverter.swift */; };
+		AC65FBAE27F4651A00584B34 /* RespLogin.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC65FBAD27F4651A00584B34 /* RespLogin.swift */; };
+		AC65FBB227F5AAF300584B34 /* APIEventLogger.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC65FBB127F5AAF300584B34 /* APIEventLogger.swift */; };
 		C3EF524A9CF7BBB280A4CD1D /* Pods_AlamofireExample.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 68597AF9542B3BE4E10BB507 /* Pods_AlamofireExample.framework */; };
 /* End PBXBuildFile section */
 
@@ -33,9 +34,10 @@
 		AC35F90A27C8CFB8007D0A84 /* BasicUIScrollViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasicUIScrollViewController.swift; sourceTree = "<group>"; };
 		AC35F90E27CF4E9B007D0A84 /* APIRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIRouter.swift; sourceTree = "<group>"; };
 		AC35F91027CF4EAA007D0A84 /* APIClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIClient.swift; sourceTree = "<group>"; };
-		AC35F91227CF4EC2007D0A84 /* DBTime.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DBTime.swift; sourceTree = "<group>"; };
 		AC35F91427CF50E3007D0A84 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		AC35F91727CF59D6007D0A84 /* JSONConverter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JSONConverter.swift; sourceTree = "<group>"; };
+		AC65FBAD27F4651A00584B34 /* RespLogin.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RespLogin.swift; sourceTree = "<group>"; };
+		AC65FBB127F5AAF300584B34 /* APIEventLogger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIEventLogger.swift; sourceTree = "<group>"; };
 		BBD944AD125A01597F2C0DBA /* Pods-AlamofireExample.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AlamofireExample.debug.xcconfig"; path = "Target Support Files/Pods-AlamofireExample/Pods-AlamofireExample.debug.xcconfig"; sourceTree = "<group>"; };
 		CC8261A75A9B2BBD32EE31F4 /* Pods-AlamofireExample.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AlamofireExample.release.xcconfig"; path = "Target Support Files/Pods-AlamofireExample/Pods-AlamofireExample.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -109,6 +111,7 @@
 			children = (
 				AC35F90E27CF4E9B007D0A84 /* APIRouter.swift */,
 				AC35F91027CF4EAA007D0A84 /* APIClient.swift */,
+				AC65FBB127F5AAF300584B34 /* APIEventLogger.swift */,
 			);
 			path = APIClient;
 			sourceTree = "<group>";
@@ -116,7 +119,7 @@
 		AC35F90D27CF4E7F007D0A84 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				AC35F91227CF4EC2007D0A84 /* DBTime.swift */,
+				AC65FBAD27F4651A00584B34 /* RespLogin.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -244,15 +247,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AC65FBB227F5AAF300584B34 /* APIEventLogger.swift in Sources */,
 				AC35F8CA27C71DB4007D0A84 /* ViewController.swift in Sources */,
 				AC35F90F27CF4E9B007D0A84 /* APIRouter.swift in Sources */,
 				AC35F91827CF59D6007D0A84 /* JSONConverter.swift in Sources */,
 				AC35F8C627C71DB4007D0A84 /* AppDelegate.swift in Sources */,
-				AC35F91327CF4EC2007D0A84 /* DBTime.swift in Sources */,
 				AC35F90B27C8CFB8007D0A84 /* BasicUIScrollViewController.swift in Sources */,
 				AC35F90927C8CE0B007D0A84 /* ListViewController.swift in Sources */,
 				AC35F91127CF4EAA007D0A84 /* APIClient.swift in Sources */,
 				AC35F91527CF50E3007D0A84 /* Constants.swift in Sources */,
+				AC65FBAE27F4651A00584B34 /* RespLogin.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

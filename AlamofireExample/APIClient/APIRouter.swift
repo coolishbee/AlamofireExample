@@ -10,10 +10,13 @@ import Alamofire
 
 enum APIRouter: URLRequestConvertible {
     
+    case login(type:String, token:String)
     case dbTime
     
     private var method: HTTPMethod {
         switch self {
+        case .login:
+            return .post
         case .dbTime:
             return .get
         }
@@ -21,26 +24,32 @@ enum APIRouter: URLRequestConvertible {
     
     private var path: String {
         switch self {
+        case .login:
+            return "/auth"
         case .dbTime:
-            return "/Db/Time/200301"
+            return "/Db/Time"
         }
     }
     
     private var parameters: Parameters? {
         switch self {
+        case .login(let type, let token):
+            return ["login_type":type, "login_token":token]
         case .dbTime:
             return nil
         }
     }
     
+    // MARK: - URLRequestConvertible
     func asURLRequest() throws -> URLRequest {
         let url = try Constants.DevServer.baseURL.asURL()
         
         var urlRequest = URLRequest(url: url.appendingPathComponent(path))
         
-        urlRequest.httpMethod = method.rawValue
-        
-        urlRequest.setValue(ContentType.json.rawValue, forHTTPHeaderField: HTTPHeaderField.acceptType.rawValue)
+        //urlRequest.httpMethod = method.rawValue
+        urlRequest.method = method
+
+        //urlRequest.setValue(ContentType.json.rawValue, forHTTPHeaderField: HTTPHeaderField.acceptType.rawValue)
         urlRequest.setValue(ContentType.json.rawValue, forHTTPHeaderField: HTTPHeaderField.contentType.rawValue)
         
         if let parameters = parameters {

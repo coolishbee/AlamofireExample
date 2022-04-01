@@ -8,8 +8,8 @@
 import Foundation
 
 struct Constants {
-    struct DevServer {
-        static let baseURL = "https://apidev.igame.co.kr"
+    struct DevServer {        
+        static let baseURL = "http://192.168.12.59:8000"
     }
     struct LiveServer {
         static let baseURL = ""
@@ -22,10 +22,8 @@ struct Constants {
 }
 
 enum HTTPHeaderField: String {
-    case authentication = "Authorization"
     case contentType = "Content-Type"
     case acceptType = "Accept"
-    case acceptEncoding = "Accept-Encoding"
 }
 
 enum ContentType: String {
