@@ -31,7 +31,9 @@ class APIClient {
 //        performRequest(route: APIRouter.dbTime, completion: completion)
 //    }
     
-    static func login(type: String, token: String, completion:@escaping (Result<RespLogin, AFError>)->Void) {
+    static func login(type: String,
+                      token: String,
+                      completion:@escaping (Result<RespLogin, AFError>)->Void) {
         performRequest(route: APIRouter.login(type: type, token: token), completion: completion)
     }
     

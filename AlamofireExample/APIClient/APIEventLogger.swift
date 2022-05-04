@@ -16,7 +16,7 @@ class APIEventLogger: EventMonitor {
               (" --> ") +
               (request.request?.url?.absoluteString ?? "")
         )        
-        print(request.request?.allHTTPHeaderFields ?? [:])
+        //print(request.request?.allHTTPHeaderFields ?? [:])
         print(request.request?.httpBody?.toPrettyPrintedString ?? "")
     }
     

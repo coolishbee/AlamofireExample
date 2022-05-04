@@ -19,6 +19,7 @@
 		AC35F91827CF59D6007D0A84 /* JSONConverter.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC35F91727CF59D6007D0A84 /* JSONConverter.swift */; };
 		AC65FBAE27F4651A00584B34 /* RespLogin.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC65FBAD27F4651A00584B34 /* RespLogin.swift */; };
 		AC65FBB227F5AAF300584B34 /* APIEventLogger.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC65FBB127F5AAF300584B34 /* APIEventLogger.swift */; };
+		ACDF34B927FECBCE008D2002 /* ReqLogin.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACDF34B827FECBCE008D2002 /* ReqLogin.swift */; };
 		C3EF524A9CF7BBB280A4CD1D /* Pods_AlamofireExample.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 68597AF9542B3BE4E10BB507 /* Pods_AlamofireExample.framework */; };
 /* End PBXBuildFile section */
 
@@ -38,6 +39,7 @@
 		AC35F91727CF59D6007D0A84 /* JSONConverter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JSONConverter.swift; sourceTree = "<group>"; };
 		AC65FBAD27F4651A00584B34 /* RespLogin.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RespLogin.swift; sourceTree = "<group>"; };
 		AC65FBB127F5AAF300584B34 /* APIEventLogger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIEventLogger.swift; sourceTree = "<group>"; };
+		ACDF34B827FECBCE008D2002 /* ReqLogin.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReqLogin.swift; sourceTree = "<group>"; };
 		BBD944AD125A01597F2C0DBA /* Pods-AlamofireExample.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AlamofireExample.debug.xcconfig"; path = "Target Support Files/Pods-AlamofireExample/Pods-AlamofireExample.debug.xcconfig"; sourceTree = "<group>"; };
 		CC8261A75A9B2BBD32EE31F4 /* Pods-AlamofireExample.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AlamofireExample.release.xcconfig"; path = "Target Support Files/Pods-AlamofireExample/Pods-AlamofireExample.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -120,6 +122,7 @@
 			isa = PBXGroup;
 			children = (
 				AC65FBAD27F4651A00584B34 /* RespLogin.swift */,
+				ACDF34B827FECBCE008D2002 /* ReqLogin.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -249,6 +252,7 @@
 			files = (
 				AC65FBB227F5AAF300584B34 /* APIEventLogger.swift in Sources */,
 				AC35F8CA27C71DB4007D0A84 /* ViewController.swift in Sources */,
+				ACDF34B927FECBCE008D2002 /* ReqLogin.swift in Sources */,
 				AC35F90F27CF4E9B007D0A84 /* APIRouter.swift in Sources */,
 				AC35F91827CF59D6007D0A84 /* JSONConverter.swift in Sources */,
 				AC35F8C627C71DB4007D0A84 /* AppDelegate.swift in Sources */,
