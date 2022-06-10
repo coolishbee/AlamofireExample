@@ -37,24 +37,10 @@ class ListViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         if indexPath.row == 0 {
             
-//            APIClient.dbTime { result in
-//                switch result {
-//                case .success(let dbTime):
-//                    let resultJSON = toJSON(dbTime)
-//                    
-//                    let viewController = BasicUIScrollViewController()
-//                    viewController.label.text = resultJSON
-//                    //print(resultJSON ?? "nil")
-//                                        
-//                    self.navigationController?.pushViewController(viewController, animated: true)
-//                case .failure(let error):
-//                    print(error)
-//                }
-//            }
         } else if indexPath.row == 1 {
             let id_token = "id_token"
             
-            APIClient.login(type: "GOOGLE", token: id_token) { result in
+            APIClient.login(type: "google", token: id_token) { result in
                 switch result {
                 case .success(let respLogin):
                     

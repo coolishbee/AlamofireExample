@@ -9,7 +9,7 @@ import Foundation
 
 struct Constants {
     struct DevServer {        
-        static let baseURL = "http://192.168.12.59:8000"
+        static let baseURL = "http://192.168.12.10:8000"
     }
     struct LiveServer {
         static let baseURL = ""

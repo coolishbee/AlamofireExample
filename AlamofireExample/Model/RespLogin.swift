@@ -10,7 +10,7 @@ import Foundation
 struct RespLogin: Codable {
     let code: UInt
     let msg: String
-    let data: RespLoginInfo
+    let data: RespLoginInfo?
 //    enum CodingKeys: String, CodingKey {
 //        case code = "code"
 //        case msg = "msg"
@@ -20,7 +20,11 @@ struct RespLogin: Codable {
 
 struct RespLoginInfo: Codable {
     let userID: String
-    let username: String
+    let userName: String
+    let userPicture: String
+    let loginType: String
+    let teamID: String
+    
 //    enum CodingKeys: String, CodingKey {
 //        case userID = "userID"
 //        case username = "username"

@@ -11,14 +11,12 @@ import Alamofire
 enum APIRouter: URLRequestConvertible {
     
     case login(type:String, token:String)
-    case dbTime
+    
     
     private var method: HTTPMethod {
         switch self {
         case .login:
             return .post
-        case .dbTime:
-            return .get
         }
     }
     
@@ -26,8 +24,7 @@ enum APIRouter: URLRequestConvertible {
         switch self {
         case .login:
             return "/auth"
-        case .dbTime:
-            return "/Db/Time"
+        
         }
     }
     
@@ -35,8 +32,7 @@ enum APIRouter: URLRequestConvertible {
         switch self {
         case .login(let type, let token):
             return ["login_type":type, "login_token":token]
-        case .dbTime:
-            return nil
+        
         }
     }
     
