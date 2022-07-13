@@ -27,10 +27,14 @@ class APIClient {
 //        }
     }
         
-    static func login(type: String,
-                      token: String,
+    static func login(_ reqLogin: ReqLogin,
                       completion:@escaping (Result<RespLogin, AFError>)->Void) {
-        performRequest(route: APIRouter.login(type: type, token: token), completion: completion)
+        performRequest(route: APIRouter.login(reqLogin), completion: completion)
+    }
+    
+    static func autoLogin(sessionKey: String,
+                          completion:@escaping (Result<RespLogin, AFError>)->Void) {
+        performRequest(route: APIRouter.autoLogin(sessionKey: sessionKey), completion: completion)
     }
     
 }

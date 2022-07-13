@@ -9,44 +9,50 @@ import Foundation
 import Alamofire
 
 enum APIRouter: URLRequestConvertible {
-    
-    case login(type:String, token:String)
-    
+    case login(_ reqLogin: ReqLogin)    
+    case autoLogin(sessionKey:String)
     
     private var method: HTTPMethod {
         switch self {
         case .login:
             return .post
+        case .autoLogin:
+            return .get
         }
     }
     
     private var path: String {
         switch self {
         case .login:
-            return "/auth"
-        
+            return "/api/login"
+        case .autoLogin(let sessionKey):
+            return "/api/autologin?sessionkey=\(sessionKey)"
         }
     }
     
     private var parameters: Parameters? {
         switch self {
-        case .login(let type, let token):
-            return ["login_type":type, "login_token":token]
-        
+        case .login(let reqLogin):
+            do{
+                return try reqLogin.encode()
+            }catch{
+                return nil
+            }
+            //return ["login_type":type, "login_token":token]
+        case .autoLogin:
+            return nil
         }
     }
     
     // MARK: - URLRequestConvertible
     func asURLRequest() throws -> URLRequest {
-        let url = try Constants.DevServer.baseURL.asURL()
+        let strUrl = String(format: "%@%@", Constants.DevServer.baseURL, path)
+        let url = try strUrl.asURL()
         
-        var urlRequest = URLRequest(url: url.appendingPathComponent(path))
-        
-        //urlRequest.httpMethod = method.rawValue
+        var urlRequest = URLRequest(url: url)
         urlRequest.method = method
-
-        //urlRequest.setValue(ContentType.json.rawValue, forHTTPHeaderField: HTTPHeaderField.acceptType.rawValue)
-        urlRequest.setValue(ContentType.json.rawValue, forHTTPHeaderField: HTTPHeaderField.contentType.rawValue)
+        urlRequest.setValue(ContentType.json.rawValue,
+                            forHTTPHeaderField: HTTPHeaderField.contentType.rawValue)
         
         if let parameters = parameters {
             do {

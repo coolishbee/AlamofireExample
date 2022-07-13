@@ -5,4 +5,5 @@ use_frameworks!
 target 'AlamofireExample' do
 	pod 'Alamofire', '~> 5.1'
 	pod 'SnapKit', '~> 5.0.0'
+  pod 'KeychainAccess'
 end

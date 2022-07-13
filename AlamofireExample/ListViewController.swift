@@ -12,7 +12,7 @@ import Alamofire
 class ListViewController: UITableViewController {
 
     let kCellIdentifier = "CellIdentifier"
-    let demos = ["GET", "POST 1", "POST 2"]
+    let demos = ["Login", "Auto Login", "TEST"]
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -36,11 +36,12 @@ class ListViewController: UITableViewController {
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         if indexPath.row == 0 {
-            
-        } else if indexPath.row == 1 {
             let id_token = "id_token"
+            let reqLogin = ReqLogin(deviceID: Helpers.getDeviceId(),
+                                    loginToken: id_token,
+                                    loginType: "google")
             
-            APIClient.login(type: "google", token: id_token) { result in
+            APIClient.login(reqLogin) { result in
                 switch result {
                 case .success(let respLogin):
                     
@@ -56,9 +57,21 @@ class ListViewController: UITableViewController {
                     print(error)
                 }
             }
+        } else if indexPath.row == 1 {
+            let session_key = "CK5TFBFPCPPWMSIO6DLILSG6HVNRVSKPWPUGO2DPH6TV6NFKM4TQ"
+            APIClient.autoLogin(sessionKey: session_key) { result in
+                switch result {
+                case .success(let respLogin):
+                    let resJSON = toJSON(respLogin)
+                    let vc = BasicUIScrollViewController()
+                    vc.label.text = resJSON
+                    
+                    self.navigationController?.pushViewController(vc, animated: true)
+                case .failure(let error):
+                    print(error)
+                }
+            }
             
-            //let viewController = BasicUIScrollViewController()
-            //navigationController?.pushViewController(viewController, animated: true)
         } else if indexPath.row == 2 {
             let viewController = BasicUIScrollViewController()
             navigationController?.pushViewController(viewController, animated: true)
