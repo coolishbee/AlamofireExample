@@ -13,12 +13,7 @@ struct Constants {
     }
     struct LiveServer {
         static let baseURL = ""
-    }
-    
-    struct APIParameterKey {
-        static let password = ""
-        static let email = ""
-    }
+    }    
 }
 
 enum HTTPHeaderField: String {

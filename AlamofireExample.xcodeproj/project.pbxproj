@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		AC35F8C627C71DB4007D0A84 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC35F8C527C71DB4007D0A84 /* AppDelegate.swift */; };
-		AC35F8CA27C71DB4007D0A84 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC35F8C927C71DB4007D0A84 /* ViewController.swift */; };
 		AC35F8CF27C71DB6007D0A84 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AC35F8CE27C71DB6007D0A84 /* Assets.xcassets */; };
 		AC35F8D227C71DB6007D0A84 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AC35F8D027C71DB6007D0A84 /* LaunchScreen.storyboard */; };
 		AC35F90927C8CE0B007D0A84 /* ListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC35F90827C8CE0B007D0A84 /* ListViewController.swift */; };
@@ -29,7 +28,6 @@
 		68597AF9542B3BE4E10BB507 /* Pods_AlamofireExample.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AlamofireExample.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		AC35F8C227C71DB4007D0A84 /* AlamofireExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AlamofireExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AC35F8C527C71DB4007D0A84 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		AC35F8C927C71DB4007D0A84 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		AC35F8CE27C71DB6007D0A84 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		AC35F8D127C71DB6007D0A84 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		AC35F8D327C71DB6007D0A84 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -102,7 +100,6 @@
 				AC35F90D27CF4E7F007D0A84 /* Model */,
 				AC35F90C27CF4E74007D0A84 /* APIClient */,
 				AC35F8C527C71DB4007D0A84 /* AppDelegate.swift */,
-				AC35F8C927C71DB4007D0A84 /* ViewController.swift */,
 				AC35F8CE27C71DB6007D0A84 /* Assets.xcassets */,
 				AC35F8D027C71DB6007D0A84 /* LaunchScreen.storyboard */,
 				AC35F8D327C71DB6007D0A84 /* Info.plist */,
@@ -258,7 +255,6 @@
 			files = (
 				AC65FBB227F5AAF300584B34 /* APIEventLogger.swift in Sources */,
 				ACB8F123287EB24E002FBD4A /* ExtensionHelpers.swift in Sources */,
-				AC35F8CA27C71DB4007D0A84 /* ViewController.swift in Sources */,
 				ACDF34B927FECBCE008D2002 /* ReqLogin.swift in Sources */,
 				AC35F90F27CF4E9B007D0A84 /* APIRouter.swift in Sources */,
 				AC35F91827CF59D6007D0A84 /* JSONConverter.swift in Sources */,
